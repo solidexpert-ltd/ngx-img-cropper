@@ -1,10 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { CropperSettings } from 'projects/ngx-img-cropper/src/lib/image-cropper/cropper-settings';
 import { ImageCropperComponent } from 'projects/ngx-img-cropper/src/public_api';
 import { CropPosition } from 'projects/ngx-img-cropper/src/lib/image-cropper/model/cropPosition';
 
 @Component({
   selector: 'app-root',
+  standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './app.component.html',
 })
 export class AppComponent {

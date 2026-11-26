@@ -1,12 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ImageCropperComponent } from './image-cropper.component';
+import { CropperSettings } from './cropper-settings';
 
 describe('ImageCropperComponent', () => {
   let component: ImageCropperComponent;
   let fixture: ComponentFixture<ImageCropperComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ImageCropperComponent ]
     })
@@ -16,6 +17,7 @@ describe('ImageCropperComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ImageCropperComponent);
     component = fixture.componentInstance;
+    component.settings = new CropperSettings();
     fixture.detectChanges();
   });
 

@@ -6,7 +6,7 @@ describe('ImageCropperService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ImageCropperService = TestBed.get(ImageCropperService);
+    const service: ImageCropperService = TestBed.inject(ImageCropperService);
     expect(service).toBeTruthy();
   });
 });

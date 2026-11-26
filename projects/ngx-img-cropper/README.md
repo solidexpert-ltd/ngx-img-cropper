@@ -1,6 +1,12 @@
 # ngx-img-cropper
 
-## Angular 9 (ivy) compatible!
+Maintained by [solidexpert-ltd](https://github.com/solidexpert-ltd). This package is published as [`@solidexpert/ngx-img-cropper`](https://www.npmjs.com/package/@solidexpert/ngx-img-cropper).
+
+Upstream project: [web-dave/ngx-img-cropper](https://github.com/web-dave/ngx-img-cropper).
+
+Repository: https://github.com/solidexpert-ltd/ngx-img-cropper
+
+## Angular 22 compatible!
 
 An image cropping tool for Angular. Features a rectangular crop area. The crop area's aspect ratio can be enforced during dragging.
 The crop image can either be 1:1 or scaled to fit an area.
@@ -8,7 +14,7 @@ The crop image can either be 1:1 or scaled to fit an area.
 ## Install from NPM
 
 ```
-    npm i ngx-img-cropper --save
+    npm i @solidexpert/ngx-img-cropper --save
 ```
 
 ## Screenshot
@@ -39,7 +45,7 @@ Let's do awesome stuff!
 
 ```typescript
 import { Component } from 'angular2/core';
-import { ImageCropperComponent, CropperSettings } from 'ngx-img-cropper';
+import { ImageCropperComponent, CropperSettings } from '@solidexpert/ngx-img-cropper';
 
 @Component({
   selector: 'test-app',
@@ -256,7 +262,7 @@ Starting with: 0.4.2 ts files are no loger published (only js & d.ts).
 Please change your system.config files to make use of the js files.
 
 ```
- 'ngx-img-cropper' :           { main: 'index.js', defaultExtension: 'js' }
+ '@solidexpert/ngx-img-cropper' :           { main: 'index.js', defaultExtension: 'js' }
 ```
 
 ## Build

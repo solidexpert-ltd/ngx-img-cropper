@@ -9,7 +9,8 @@ import {
   Output,
   EventEmitter,
   Renderer2,
-  SimpleChanges, Inject
+  SimpleChanges, Inject,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { CropperSettings } from './cropper-settings';
 import { ImageCropper } from './imageCropper';
@@ -21,6 +22,8 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'img-cropper',
+  standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './image-cropper.component.html'
 })
 export class ImageCropperComponent
@@ -50,7 +53,7 @@ export class ImageCropperComponent
   public intervalRef: number;
   public raf: number;
   public renderer: Renderer2;
-  public windowListener: EventListenerObject;
+  public windowListener: EventListener;
 
   private isCropPositionUpdateNeeded: boolean;
   private dragUnsubscribers: (() => void)[] = [];

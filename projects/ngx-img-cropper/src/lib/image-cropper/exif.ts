@@ -360,7 +360,7 @@ export class Exif {
       (img as IImageExtended).exifdata = data || {};
       (img as IImageExtended).iptcdata = iptcdata || {};
       if (callback) {
-        callback.call(img);
+        (callback as (this: IImageExtended | Blob | File) => void).call(img);
       }
     };
 
